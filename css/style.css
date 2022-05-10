@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+:root
+{
+    --color-black : rgb(34, 40, 49);
+    --color-gray : rgb(57, 62, 70);
+    --color-primary : rgb(0, 173, 181);
+    --color-secondary: rgb(238, 238, 238);
+}
+
+.bi 
+{
+    color: var(--color-secondary)
+}
+
+body 
+{
+    font-family: 'Ubuntu', sans-serif;
+    margin : 0px;
+    background-color: var(--color-black);
+}
+
+h1.title
+{
+    text-align: center;
+    color: white;
+    background-color: var(--color-black);
+}
+
+#brain
+{
+    background-image: url('../img/brain.webp');
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    margin: 0 auto;
+    transition: border-bottom-right, top, left ease 4s;
+    animation: brain_fly ease-in-out 1.3s infinite;
+
+}
+
+.add
+{
+    color: white;
+}
+
+.nodes
+{
+    color: white;
+}
+
+.notes
+{
+    color: white;
+}
+
+.notes:hover, .nodes:hover, .add:hover
+{
+    transition: 0.5s;
+    color:rgb(0, 173, 181);
+}
+
+@keyframes brain_fly {
+    0% {
+        transform: translate(0px, 0px) rotateZ(0.001deg);  
+        animation-timing-function:ease-in-out
+       }
+     
+       50% {
+         transform: translate(0px, 12px) rotateZ(0.001deg);
+         animation-timing-function:ease-in-out
+       }
+     
+       100% {
+        transform: translate(0px, 0px) rotateZ(0.001deg);
+        animation-timing-function:ease-in-out
+       }
+}
+
+.lines 
+{
+    position:absolute;
+    width:1px;
+    margin-top:-1px;
+    background-color:white;
+}
